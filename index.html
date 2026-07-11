@@ -26,7 +26,20 @@ src="https://www.facebook.com/tr?id=1491540225518275&ev=PageView&noscript=1"
 <!-- End Meta Pixel Code -->
 
 
+<script>
+function redirectTelegram(button) {
+    fbq('track', 'Subscribe');
 
+    button.innerHTML = "⏳ Redirecting...";
+    button.style.pointerEvents = "none";
+    button.style.opacity = "0.7";
+
+    setTimeout(function () {
+        window.location.assign("https://t.me/+fp3sGIi0FVwxY2U9");
+    }, 3000);
+}
+</script>
+ 
 <style>
 body {
   margin:0;
@@ -117,10 +130,10 @@ h1 {
     Join the original channel for daily updates
   </div>
 
-<a href="https://t.me/+fp3sGIi0FVwxY2U9"
-class="btn"
-onclick="this.innerHTML='Waiting...'; setTimeout(function(){alert('3 seconds completed');},3000); return false;">
-🚀 Join Telegram Now 🚀
+<a href="javascript:void(0)"
+   class="btn"
+   onclick="redirectTelegram(this)">
+   🚀 Join Telegram Now 🚀
 </a>
 
   <!-- TRUST TEXT -->
